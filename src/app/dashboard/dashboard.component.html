@@ -1,8 +1,14 @@
-<div class="" style="margin-top: 20px; text-align: center;">
+<div class="" style="margin-top: 20px; text-align: center">
   <form class="billForm" [formGroup]="billForm">
-    <input type="number"  placeholder="$ 0.0"  formControlName="amount" >
-    <textarea  placeholder="Describe..."  rows="5" cols="25" formControlName="describe"></textarea>
+    <input type="number" placeholder="$ 0.0" formControlName="amount" />
+    <textarea
+      placeholder="Describe..."
+      rows="5"
+      cols="25"
+      formControlName="describe"
+    ></textarea>
     <button class="" (click)="addBill($event)"><span>Add bill</span></button>
+    <button (click)="getTotal()">gettotal</button>
   </form>
 </div>
 
@@ -10,21 +16,23 @@
   <p class="heading">BMS dashboard !</p>
   <div class="main">
     <div class="dayWise">
-      dayswise  expenses
-      <ul *ngFor="let bill of bills">
-        <li>{{bill.amount |currency}} <span>{{bill.describe}}</span>  </li>
-       
+      dayswise expenses
+      <ul *ngFor="let bill of bills; let i = index">
+        <li>
+          {{ i + 1 }} : {{ bill.amount | currency }}
+          <span>{{ bill.describe }}</span>
+        </li>
       </ul>
     </div>
     <div class="vl"></div>
     <div class="mnthWise">
-        Monthly expenses
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-        </ul>
-      </div>
+      Monthly expenses
+      <ul *ngFor="let bill of bills; let i = index">
+        <li>
+          {{ i + 1 }} : {{ bill.amount | currency }}
+        </li>
+      </ul>
+      <span *ngIf="total"> <b>TOTAL :  {{total |currency}}</b></span>
+    </div>
   </div>
 </div>
-
