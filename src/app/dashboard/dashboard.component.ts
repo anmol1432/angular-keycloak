@@ -13,10 +13,13 @@ export class DashboardComponent implements OnInit {
     amount: '',
     describe: '',
   });
+
+  bills:Array<{id:number, describe:string,amount:number}> =[]
   addBill(e: any): void {
     e.preventDefault();
     console.log('--------->itself', this.billForm.value);
-   
+    this.bills.push(this.billForm.value);
+    console.log("the bills ",this.bills)
   }
   constructor(private formBuilder: FormBuilder) { }
 

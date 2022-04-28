@@ -11,10 +11,9 @@
   <div class="main">
     <div class="dayWise">
       dayswise  expenses
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+      <ul *ngFor="let bill of bills">
+        <li>{{bill.amount |currency}} <span>{{bill.describe}}</span>  </li>
+       
       </ul>
     </div>
     <div class="vl"></div>
