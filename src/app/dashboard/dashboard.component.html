@@ -1,4 +1,31 @@
-<div class="main">
-    <p> BMS dashboard !</p>
-
+<div class="" style="margin-top: 20px; text-align: center;">
+  <form class="billForm" [formGroup]="billForm">
+    <input type="number"  placeholder="$ 0.0"  formControlName="amount" >
+    <textarea  placeholder="Describe..."  rows="5" cols="25" formControlName="describe"></textarea>
+    <button class="" (click)="addBill($event)"><span>Add bill</span></button>
+  </form>
 </div>
+
+<div class="dashboard">
+  <p class="heading">BMS dashboard !</p>
+  <div class="main">
+    <div class="dayWise">
+      dayswise  expenses
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </div>
+    <div class="vl"></div>
+    <div class="mnthWise">
+        Monthly expenses
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </div>
+  </div>
+</div>
+

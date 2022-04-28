@@ -1,6 +1,26 @@
-.main{
+.dashboard{
+    display: table;
+    margin: auto;
+}
+.heading{
+    text-align: center;
+}
+.main,.billForm{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 10px;
+    width: fit-content;
+}
+
+
+.billForm{
+flex-direction: column;
+}
+ul{
+    list-style: none;
+}
+.vl {
+    border-left: 3px solid rgb(39, 127, 149);
+    height: 200px;
 }
