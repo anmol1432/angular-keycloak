@@ -17,6 +17,8 @@ export class LoginComponent implements OnInit {
   });
   isAuthent: boolean = false;
   errorMsg: string = 'Please enter credentials !';
+  fontSize=60;
+  name ="green"
 
   onSubmit(e: any): void {
     e.preventDefault();

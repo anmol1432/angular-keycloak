@@ -1,0 +1,7 @@
+<div>
+    <button type="button" (click)="dec()" title="smaller">-</button>
+    <button type="button" (click)="inc()" title="bigger">+</button>
+    <span [style.font-size.px]="size" [style.color]="name">FontSize: {{size}} px</span>
+    child end
+    <input type="text" (input)="getval($event)" [value]="name">
+</div>

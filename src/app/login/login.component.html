@@ -14,7 +14,12 @@
      placeholder="password" 
      formControlName="password" />
     <button style="margin-top: 10px" (click)="onSubmit($event)">Signin</button>
+  </form> 
+</div>
 
-  </form>
- 
+fontsize in parent {{fontSize}} =====> {{name}}
+<hr>
+
+<div>
+  <app-counter [size]="fontSize"  [name]="name" (nameChange)="name=$event" (sizeChange)="fontSize=$event"></app-counter>
 </div>
