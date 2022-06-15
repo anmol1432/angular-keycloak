@@ -1,0 +1,8 @@
+{
+  "realm": "bms",
+  "auth-server-url": "http://172.17.98.65:8080/auth/",
+  "ssl-required": "external",
+  "resource": "bms",
+  "public-client": true,
+  "confidential-port": 0
+}

@@ -11,7 +11,7 @@
     <button (click)="getTotal()">gettotal</button>
   </form>
 </div>
-
+<a routerLink="/login">login</a>
 <div class="dashboard">
   <p class="heading">BMS dashboard !</p>
   <div class="main">
@@ -36,3 +36,38 @@
     </div>
   </div>
 </div>
+<div>======</div>
+<div>======</div>
+<div>======</div>
+<div>======</div>
+<div>======</div>
+<h1>My Angular Application with Keycloak</h1>
+
+		<button *ngIf="isLogueado" type="button" (click)="cerrarSesion()">Clear session</button>
+
+		<ng-container *ngIf="perfilUsuario">
+		  <h2>User information</h2>
+		  <table>
+		    <tr *ngIf="perfilUsuario.username">
+		      <th scope="row">User</th>
+		      <td>{{ perfilUsuario.username }}</td>
+		      <td>{{ perfilUsuario | json }}</td>
+		    </tr>
+		    <tr *ngIf="perfilUsuario.firstName">
+		      <th scope="row">Primer Nombre</th>
+		      <td>{{ perfilUsuario.firstName }}</td>
+		    </tr>
+		    <tr *ngIf="perfilUsuario.lastName">
+		      <th scope="row">Segundo Nombre</th>
+		      <td>{{ perfilUsuario.lastName }}</td>
+		    </tr>
+		    <tr *ngIf="perfilUsuario.email">
+		      <th scope="row">Correo Electronico</th>
+		      <td>{{ perfilUsuario.email }}</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">Email Verified</th>
+		      <td>{{ perfilUsuario.emailVerified ? 'Si' : 'No' }}</td>
+		    </tr>
+		  </table>
+		</ng-container>
